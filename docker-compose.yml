@@ -20,10 +20,8 @@ services:
       - pos-database
     ports:
       - "3000:3000"
-    volumes:
-      - ./pos-api:/app
     environment:
-      DATABASE_URL: postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@pos-database:5432/${DATABASE_NAME}
+      DATABASE_URL: postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@pos-database:5432/${DATABASE_NAME}?schema=public
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_USER: ${DATABASE_USER}
