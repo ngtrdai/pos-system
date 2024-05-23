@@ -1,0 +1,29 @@
+name: pos-api-docker-build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "pos-api/**"
+      - ".github/workflows/pos-api-ci.yaml"
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: ./pos-api
+          file: ./pos-api/Dockerfile
+          push: true
+          tags: ghcr.io/ngtrdai/pos-system/pos-api:latest
