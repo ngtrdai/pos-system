@@ -1,6 +1,6 @@
 # POS System
 
-This is a Point of Sale (POS) System built with NestJS and PostgreSQL.
+This is a Point of Sale (POS) System built with NestJS, NextJS and PostgreSQL.
 
 ## Prerequisites
 
@@ -16,39 +16,39 @@ To set up the project, follow these steps:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/ngtrdai/pos-system.git
-    ```
+   ```bash
+   git clone https://github.com/ngtrdai/pos-system.git
+   ```
 
 2. Navigate to the project directory:
 
-    ```bash
-    cd pos-system
-    ```
+   ```bash
+   cd pos-system
+   ```
 
 3. Install the dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 4. Start the PostgreSQL database using Docker Compose:
 
-    ```bash
-    docker-compose up -d
-    ```
+   ```bash
+   docker-compose up -d
+   ```
 
 5. Set up the database schema:
 
-    ```bash
-    npm run migrate:run
-    ```
+   ```bash
+   npm run migrate:run
+   ```
 
 6. Start the application:
 
-    ```bash
-    npm run start:dev
-    ```
+   ```bash
+   npm run start:dev
+   ```
 
 7. Access the POS System in your browser at `http://localhost:3000`.
 
